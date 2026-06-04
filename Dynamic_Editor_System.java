@@ -1,18 +1,28 @@
-/*
-StringBuilder Dynamic Editor System
+public class StringBuilderEditor {
 
-Create a program that uses StringBuilder to simulate a text editor.
+	    public static void main(String[] args) {
 
-Operations:
-Insert text
-Delete part of text
-Replace text
-Reverse text
+	        // Start with "Java"
+	        StringBuilder sb = new StringBuilder("Java");
+	        System.out.println("Start: " + sb);
 
-Example Flow:
-Start: Java
-Insert: Programming
-Delete: Java
-Replace: Programming  - Coding
-Reverse final string
-*/
+	        // Insert " Programming"
+	        sb.insert(4, " Programming");
+	        System.out.println("After Insert: " + sb);
+
+	        // Delete "Java"
+	        sb.delete(0, 4);
+	        System.out.println("After Delete: " + sb);
+
+	        // Replace "Programming" with "Coding"
+	        sb.replace(1, sb.length(), "Coding");
+	        System.out.println("After Replace: " + sb);
+
+	        // Reverse final string
+	        sb.reverse();
+	        System.out.println("After Reverse: " + sb);
+	    }
+	}
+
+
+
