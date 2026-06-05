@@ -13,3 +13,18 @@ Output:
 JAVA
 java
 */
+import java.util.Scanner;
+
+public class CaseConverter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+        
+        System.out.println(input.toUpperCase());
+        System.out.println(input.toLowerCase());
+        
+        sc.close();
+    }
+}
