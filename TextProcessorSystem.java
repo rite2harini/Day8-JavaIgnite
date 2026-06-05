@@ -1,22 +1,22 @@
-/*
-Create a program that:
+public class StringBuilderEditor {
+	public static void main(String[] args) {
 
-Takes a string input using StringBuilder
+        StringBuilder sb = new StringBuilder("Java");
+        System.out.println("Start: " + sb);
 
-Perform the following operations:
+        sb.insert(4, " Programming");
+        System.out.println("After Insert: " + sb);
 
-Tasks:
-Append a word at the end
-Insert a word in the middle
-Replace part of the string
-Reverse the final string
-Example Flow:
-Input: Java
-Append: Programming
-Insert: "Easy" in middle
-Replace: "Easy" → "Powerful"
-Reverse final string
-Rules:
-Must use StringBuilder only
-Do not convert back to String for operations
-*/
+        sb.delete(0, 4);
+        System.out.println("After Delete: " + sb);
+
+        
+        sb.replace(1, sb.length(), "Coding");
+        System.out.println("After Replace: " + sb);
+
+  
+        sb.reverse();
+        System.out.println("After Reverse: " + sb);
+    }
+
+}

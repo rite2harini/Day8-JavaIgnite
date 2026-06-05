@@ -1,15 +1,16 @@
-/*
-Create a program that:
+import java.util.Scanner;
+public class StringCaseConverter {
+	 public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
 
-Takes a string input
+	        System.out.print("Enter a string: ");
+	        String str = sc.nextLine();
 
-Print:
+	        System.out.println("Uppercase: " + str.toUpperCase());
+	        System.out.println("Lowercase: " + str.toLowerCase());
 
-Uppercase version
-Lowercase version
-Example:
-Input: Java
-Output:
-JAVA
-java
-*/
+	        sc.close();
+	    }
+
+}
+

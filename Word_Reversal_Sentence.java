@@ -1,11 +1,23 @@
-/*
-Word Reversal in Sentence
+import java.util.Scanner;
+public class WordReverseSentence {
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-Create a program that:
+        System.out.print("Enter a sentence: ");
+        String sentence = sc.nextLine();
 
-Takes a full sentence as input
-Reverses each word, but keeps word order same
-Example:
-Input: Java is fun
-Output: avaJ si nuf
-  */
+        String[] words = sentence.split(" ");
+
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+
+            for (int j = word.length() - 1; j >= 0; j--) {
+                System.out.print(word.charAt(j));
+            }
+
+            System.out.print(" ");
+        }
+
+        sc.close();
+	}
+}
