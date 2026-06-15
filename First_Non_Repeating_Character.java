@@ -1,14 +1,36 @@
-/*
-First Non-Repeating Character
+package JAVA_DAY_9;
 
-Create a program that:
+import java.util.Scanner;
 
-Takes a string input
-Finds the first character that does NOT repeat
-Example:
-Input: programming
-Output: p
-Hint:
+public class FIRST_NON_REPEATING_CHARACTER {
 
-You need frequency logic using loops.
-*/
+	public static void main(String[] args) {
+		try (// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in)) {
+			System.out.println("Enter the string:");
+			String string = sc.nextLine();
+
+			for(int i = 0; i < string.length(); i++)
+			{
+			    int count = 0;
+
+			    for(int j = 0; j < string.length(); j++)
+			    {
+			        if(string.charAt(i) == string.charAt(j))
+			        {
+			            count++;
+			        }
+			    }
+
+			    if(count == 1)
+			    {
+			        System.out.println("First non repeating character: " + string.charAt(i));
+			        return;
+			    }
+			}
+
+			System.out.println("All characters in the given string were repeating");
+			sc.close();
+		}
+    }
+}
